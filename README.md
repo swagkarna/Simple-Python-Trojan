@@ -16,7 +16,7 @@ Windows is a bit more tricky because it doesn't ship with python.  To work aroun
 this, the script is configured to run an embeddable python interpreter to do all the work.  
 It's available at: https://www.python.org/ftp/python/3.9.0/python-3.9.0-embed-amd64.zip
 
-From here, it's just a matter of running decoder.exe on the victim machine. 
+From here, you can either use the embeddable python interpreter to run the script, or you can compile it to an .exe with pyinstaller.  
 
 ### Linux
 This trojan is developed for Windows, but thanks to how universal python is, it will run on most any operating system.
