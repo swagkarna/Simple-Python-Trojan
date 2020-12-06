@@ -1,5 +1,5 @@
 # Simple-Python-Trojan
-A simple python trojan for 3.8 that creates a backdoor via netcat.  It's not too impressive, but Windows Defender doesn't pick up on it.   
+A simple python trojan for 3.8 that creates a backdoor via netcat. 
 
 ## Usage
 Using the script varies from OS to OS.
